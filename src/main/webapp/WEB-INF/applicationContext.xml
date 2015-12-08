@@ -14,17 +14,20 @@
 	</context:component-scan>
 	<jdbc:embedded-database type="HSQL" id="dataSource"/>
 	<bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="emf">
-		<property name="packagesToScan" value="ca.karan.jba.entity"/>
+		<property name="packagesToScan" value="cz.karan.jba.entity"/>
 		<property name="dataSource" ref="dataSource"/>
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
 			</props>
+		</property>
+		<property name="persistenceProvider">
+		<bean class="org.hibernate.jpa.HibernatePersistenceProvider"/>
 		</property>
 	</bean>
 	<tx:annotation-driven transaction-manager="transactionManager"/>
-	<bean class="org.springframework.orm.jpa.JpaTransactionManager">
+	<bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
 	<property name="dataSource" ref="dataSource"/>
 	</bean>
 </beans>
