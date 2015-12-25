@@ -21,7 +21,7 @@ public class Item {
 	private String description;
 	
 	@Column(name="published_date")
-	private Date publisedDate;
+	private Date publishedDate;
 	
 	private String link;
 	@ManyToOne
@@ -60,12 +60,12 @@ public class Item {
 		this.description = description;
 	}
 
-	public Date getPublisedDate() {
-		return publisedDate;
+	public Date getPublishedDate() {
+		return publishedDate;
 	}
 
-	public void setPublisedDate(Date publisedDate) {
-		this.publisedDate = publisedDate;
+	public void setPublishedDate(Date publisedDate) {
+		this.publishedDate = publisedDate;
 	}
 
 	public String getLink() {
