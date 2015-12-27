@@ -9,7 +9,7 @@
 	<h1>${blog.name}</h1>
 	<p>${blog.url}</p>
 	
-	<table class="table-bordered table-hover table-striped" >
+	<table class="table table-bordered table-hover table-striped" >
 	<thead style="margin-left:100px">
 		<tr>
 			<th>Title</th>
