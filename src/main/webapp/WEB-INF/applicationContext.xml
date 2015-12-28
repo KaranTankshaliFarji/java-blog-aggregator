@@ -33,4 +33,5 @@
 	<property name="dataSource" ref="dataSource"/>
 	</bean>
 	<jpa:repositories base-package="cz.karan.jba.repository"></jpa:repositories>
+	<import resource="security.xml"/>
 </beans>

@@ -42,7 +42,7 @@
             <ul class="nav navbar-nav navbar-right">
               
               <li><a href="../navbar-static-top/">Log In</a></li>
-              <li><a href="../navbar-fixed-top/">Sign Up</a></li>
+              <li class="${current == 'signup'? 'active':'' }"><a href="/register.html">Sign Up</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->

@@ -22,4 +22,9 @@
     <put-attribute name="body" value="/WEB-INF/jsp/userdetail.jsp" />
     <put-attribute name="current" value="users"/>
   </definition>
+  <definition name="user-register" extends="common">
+    <put-attribute name="title" value="Register" />
+    <put-attribute name="body" value="/WEB-INF/jsp/userregister.jsp" />
+    <put-attribute name="current" value="signup"/>
+  </definition>
 </tiles-definitions>
