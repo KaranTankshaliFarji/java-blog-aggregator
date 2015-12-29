@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -34,14 +36,20 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="${current == 'index'? 'active':'' }"><a href="/">Home</a></li>
+              <security:authorize access="hasRole('ROLE_ADMIN')">
               <li class="${current == 'users'? 'active':'' }"><a href="/users.html">Users</a></li>
+              </security:authorize>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact us</a></li>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              
-              <li><a href="../navbar-static-top/">Log In</a></li>
+              <security:authorize access="isAuthenticated()">
+              <li><a href="/logout">Log Out</a></li>
+              </security:authorize>
+              <security:authorize access="!isAuthenticated()">
+              <li class="${current == 'login'? 'active':'' }"><a href="/login.html">Log In</a></li>
+              </security:authorize>
               <li class="${current == 'signup'? 'active':'' }"><a href="/register.html">Sign Up</a></li>
             </ul>
           </div><!--/.nav-collapse -->
