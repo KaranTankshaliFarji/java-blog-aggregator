@@ -17,6 +17,15 @@ public class User {
 		private Integer id;
 		private String name;
 		private String email;
+		private boolean enabled;
+		public boolean isEnabled() {
+			return enabled;
+		}
+
+		public void setEnabled(boolean enabled) {
+			this.enabled = enabled;
+		}
+
 		private String password;
 		@ManyToMany
 		@JoinTable
