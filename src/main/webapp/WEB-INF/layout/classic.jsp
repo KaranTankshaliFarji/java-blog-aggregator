@@ -39,8 +39,9 @@
               <security:authorize access="hasRole('ROLE_ADMIN')">
               <li class="${current == 'users'? 'active':'' }"><a href="/users.html">Users</a></li>
               </security:authorize>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact us</a></li>
+              <security:authorize access="isAuthenticated()">
+              <li class="${current == 'account'? 'active':'' }"><a href="/account.html">My Account</a></li>
+              </security:authorize>
               
             </ul>
             <ul class="nav navbar-nav navbar-right">

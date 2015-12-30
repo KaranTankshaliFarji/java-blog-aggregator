@@ -1,5 +1,6 @@
 package cz.karan.jba.controller;
 
+import java.security.Principal;
 import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +47,13 @@ public class UserController {
 		public String doRegister(@ModelAttribute("user") User user )
 		{
 			userService.save(user);
-			return "user-register";
+			return "redirect:/register.html?success=true";
 		}
-		
+		@RequestMapping("/account")
+		public String account(Model model,Principal principal)
+		{
+			String name = principal.getName();
+			model.addAttribute("user",userService.findOneWithBlogs(name));
+			return "userdetail";
+		}
 }
