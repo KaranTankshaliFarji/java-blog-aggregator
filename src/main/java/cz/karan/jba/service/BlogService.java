@@ -23,5 +23,9 @@ public class BlogService {
 		blogRepository.save(blog);
 		
 	}
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		blogRepository.delete(id);
+	}
 
 }

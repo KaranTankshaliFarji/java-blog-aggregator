@@ -65,7 +65,8 @@ $(document).ready(function(){
 			<div role="tabpanel" class="tab-pane" id="blog_${blog.id}">
 				<h1>${blog.name}</h1>
 				<p>${blog.url}</p>
-
+				<a href="/blog/remove/${blog.id}.html" class="btn btn-danger">Remove</a>
+				<br/>
 				<table class="table table-bordered table-hover table-striped">
 					<thead style="margin-left: 100px">
 						<tr>
