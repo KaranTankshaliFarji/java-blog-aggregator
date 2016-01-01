@@ -6,6 +6,7 @@
 <thead>
 	<tr>
 	<th>user name</th>
+	<th>operations</th>
 	</tr>
 </thead>
 <tbody>
@@ -14,6 +15,11 @@
 		<td>
 		<a href="/users/${user.id}.html">
 			${user.name}
+		</a>
+		</td>
+		<td>
+		<a href="/user/remove/${user.id}.html" class="btn btn-danger">Remove
+		
 		</a>
 		</td>
 	</tr>
