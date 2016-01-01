@@ -18,7 +18,7 @@
 		</a>
 		</td>
 		<td>
-		<a href="/user/remove/${user.id}.html" class="btn btn-danger">Remove
+		<a href="/users/remove/${user.id}.html" class="btn btn-danger">Remove
 		
 		</a>
 		</td>

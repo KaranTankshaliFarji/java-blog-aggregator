@@ -51,8 +51,9 @@
               </security:authorize>
               <security:authorize access="!isAuthenticated()">
               <li class="${current == 'login'? 'active':'' }"><a href="/login.html">Log In</a></li>
-              </security:authorize>
               <li class="${current == 'signup'? 'active':'' }"><a href="/register.html">Sign Up</a></li>
+              </security:authorize>
+              
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
