@@ -14,7 +14,7 @@
 	<tr>
 		<td>
 		<a href="/users/${user.id}.html">
-			${user.name}
+			<c:out value="${user.name}"/>
 		</a>
 		</td>
 		<td>
