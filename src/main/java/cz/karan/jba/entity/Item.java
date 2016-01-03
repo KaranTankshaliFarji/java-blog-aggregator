@@ -7,7 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 public class Item {
@@ -18,6 +21,7 @@ public class Item {
 	
 	private String title;
 	
+	@Lob
 	@Column(length= 10000)
 	private String description;
 	
