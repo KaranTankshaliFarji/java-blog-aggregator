@@ -1,6 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ include file="../layout/taglib.jsp" %>
+<!-- <h1>Hello From Spring</h1> -->
+<!-- <h2>I welcome you here</h2> -->
+<h1>Latest News From Java World</h1>
 
-<h1>Hello From Spring</h1>
-<h2>I welcome you here</h2>
+				<table class="table table-bordered table-hover table-striped">
+					<thead style="margin-left: 100px">
+						<tr>
+							<th>Published date</th>
+							<th>Title</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${items}" var="item">
+							<tr>
+								<td><c:out value="${item.publishedDate}" />
+								<br/>
+								<c:out value="${item.blog.name}" />
+								</td>
+								<td>
+								<strong>
+								<a href="<c:out value="${item.link}" />" target="_blank">
+								<c:out value="${item.title}" />
+								</a>
+								</strong>
+								<br/>
+								${item.description}
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+
