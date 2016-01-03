@@ -7,12 +7,14 @@
 <lastBuildDate>Sun, 22 Jun 2014 20:35:49 +0000</lastBuildDate>
 <pubDate>Sun, 22 Jun 2014 20:35:49 +0000</pubDate>
 <ttl>1800</ttl>
-<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/javavids" /><feedburner:info uri="javavids" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/javavids" /><feedburner:info uri="javavids" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" />
+<item>
 <title>How to solve Source not found error during debug in Eclipse</title>
 <description>If you run your web application using embedded Java EE server in Maven (like Tomcat or Jetty) and try to run it in debug mode, once you hit some breakpoint, you will encounter this error: "Source not found".&lt;img src="http://feeds.feedburner.com/~r/javavids/~4/CJQ8y5pkbzc" height="1" width="1" alt=""/&gt;</description>
 <link>http://feedproxy.google.com/~r/javavids/~3/CJQ8y5pkbzc/how-to-solve-source-not-found-error-during-debug-in-eclipse.html</link>
 <pubDate>Sun, 22 Jun 2014 20:35:49 +0000</pubDate>
-<feedburner:origLink>http://www.javavids.com/video/how-to-solve-source-not-found-error-during-debug-in-eclipse.html</feedburner:origLink></item>
+<feedburner:origLink>http://www.javavids.com/video/how-to-solve-source-not-found-error-during-debug-in-eclipse.html</feedburner:origLink>
+</item>
 <item>
 <title>JAXB: Access Restriction Warning</title>
 <description>How to solve "Access restriction: The type JAXBContext is not accessible due to restriction on required library"?&lt;img src="http://feeds.feedburner.com/~r/javavids/~4/7eCZuCuzZjk" height="1" width="1" alt=""/&gt;</description>
